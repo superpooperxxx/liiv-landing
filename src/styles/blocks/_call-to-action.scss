@@ -1,0 +1,87 @@
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  padding-block: 160px;
+
+  @include onDesktop {
+    padding-block: 208px;
+  }
+
+  &__email {
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    color: $text-secondary;
+    text-decoration: none;
+
+    @include onTablet {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include onDesktop {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    @include onTablet {
+      font-size: 72px;
+    }
+
+    @include onDesktop {
+      font-size: 96px;
+    }
+  }
+
+  &__affordable {
+    position: relative;
+    display: block;
+
+    & svg {
+      position: absolute;
+      top: -8px;
+      left: -16px;
+      right: -16px;
+
+      @include onTablet {
+        left: -20px;
+        right: -20px;
+      }
+
+      @include onDesktop {
+        left: -24px;
+        right: -24px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 12px 16px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-foreground;
+    line-height: 20px;
+
+    background: $primary;
+    border-radius: 12px;
+
+    @include onTablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

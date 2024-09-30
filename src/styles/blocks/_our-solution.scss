@@ -1,0 +1,11 @@
+.our-solution {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

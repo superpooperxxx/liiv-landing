@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  &__tag {
+    height: max-content;
+    padding: 4px 16px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background: #ecebf0;
+    border-radius: 15px;
+
+    @include onTablet {
+      font-size: 16px;
+    }
+  }
+}

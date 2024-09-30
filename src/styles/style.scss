@@ -1,0 +1,22 @@
+// utils
+@import "./utils/colors";
+@import "./utils/fonts";
+@import "./utils/reset";
+@import "./utils/normalize";
+@import "./utils/breakpoints";
+
+// ui
+@import "./ui/section-header";
+@import "./ui/card";
+
+//blocks
+@import "./blocks/page";
+@import "./blocks/container";
+@import "./blocks/header";
+@import "./blocks/hero/hero";
+@import "./blocks/hero/tags";
+@import "./blocks/call-to-action";
+@import "./blocks/the-problem";
+@import "./blocks/metrics";
+@import "./blocks/our-solution";
+@import "./blocks/contact";

@@ -1,0 +1,26 @@
+.the-problem {
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__paragraph {
+    max-width: 900px;
+    margin: 0 auto;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+
+    @include onTablet {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}

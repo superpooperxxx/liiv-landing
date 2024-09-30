@@ -1,0 +1,18 @@
+.section-header {
+  margin-bottom: 64px;
+
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+
+  @include onTablet {
+    margin-bottom: 96px;
+
+    font-size: 60px;
+  }
+
+  @include onDesktop {
+    font-size: 72px;
+  }
+}

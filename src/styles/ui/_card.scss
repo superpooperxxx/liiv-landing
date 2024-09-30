@@ -1,0 +1,39 @@
+.card {
+  padding: 20px;
+
+  border: 2px solid $text-main;
+  border-radius: 24px;
+
+  &__text {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+
+    @include onTablet {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    &--highlighted {
+      position: relative;
+
+      display: inline-block;
+      white-space: nowrap;
+
+      & > svg {
+        position: absolute;
+        bottom: -2px;
+        left: -1px;
+        right: -1px;
+        z-index: -1;
+
+        stroke-width: 2px;
+      }
+    }
+  }
+}

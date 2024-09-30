@@ -1,0 +1,11 @@
+.page {
+  background-color: $background;
+
+  &__header {
+    margin-bottom: 20px;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+  }
+}
