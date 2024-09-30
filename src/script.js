@@ -3,10 +3,10 @@ import { SplitText } from "./scripts/SplitText";
 gsap.registerPlugin(ScrollTrigger);
 
 // AFFORDABLE
-const affordableLinePath = document.querySelector("#affordable-line > path");
+const affordableLinePath = document.querySelector(".affordable-line > path");
 const affordableLinePathLength = affordableLinePath.getTotalLength();
 
-gsap.set("#affordable-line", {
+gsap.set(".affordable-line", {
   opacity: 0,
   strokeDasharray: affordableLinePathLength,
   strokeDashoffset: affordableLinePathLength,
@@ -15,15 +15,15 @@ gsap.set("#affordable-line", {
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: "#affordable-line",
+      trigger: ".affordable-line",
       start: "top 70%",
     },
   })
-  .to("#affordable-line", {
+  .to(".affordable-line", {
     opacity: 1,
     duration: 0,
   })
-  .to("#affordable-line", {
+  .to(".affordable-line", {
     strokeDashoffset: 0,
     duration: 1,
   });
