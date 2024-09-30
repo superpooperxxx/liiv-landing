@@ -7,16 +7,87 @@ const lenis = new Lenis({
   lerp: 0.05,
 });
 
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
 
 requestAnimationFrame(raf);
+
+// HERO
+const housingWordChars = new SplitText(".hero-title__word--housing").chars;
+const authorityWordChars = new SplitText(".hero-title__word--authority").chars;
+const managementWordChars = new SplitText(".hero-title__word--management")
+  .chars;
+const softwareWordChars = new SplitText(".hero-title__word--software").chars;
+
+const heroTitleWords = [
+  housingWordChars,
+  authorityWordChars,
+  managementWordChars,
+  softwareWordChars,
+];
+
+gsap.set(heroTitleWords, {
+  yPercent: 100,
+});
+
+gsap.set(".hero__text", {
+  opacity: 0,
+  y: 10,
+});
+
+gsap.set(".hero__tags", {
+  opacity: 0,
+  y: 10,
+});
+
+gsap.set(".hero__dashboard", {
+  opacity: 0,
+  y: 40,
+});
+
+gsap
+  .timeline({
+    onStart: () => {
+      lenis.stop();
+    },
+    onComplete: () => {
+      lenis.start();
+    },
+  })
+  .to(heroTitleWords, {
+    yPercent: 0,
+    stagger: 0.05,
+    duration: 1,
+    ease: "back.out",
+  })
+  .to(".hero__text", {
+    opacity: 1,
+    y: 0,
+    ease: "power3.out",
+    duration: 1,
+  })
+  .to(
+    ".hero__tags",
+    {
+      opacity: 1,
+      y: 0,
+      ease: "back.out",
+      duration: 1,
+    },
+    "<"
+  )
+  .to(
+    ".hero__dashboard",
+    {
+      opacity: 1,
+      y: 0,
+      ease: "back.out",
+      duration: 1,
+    },
+    "<"
+  );
 
 // AFFORDABLE
 const affordableLinePath = document.querySelector(".affordable-line > path");

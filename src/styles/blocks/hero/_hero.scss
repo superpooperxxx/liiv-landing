@@ -16,27 +16,6 @@
 
   &__title {
     margin-bottom: 12px;
-
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1;
-
-    @include onTablet {
-      grid-column: span 3;
-
-      margin-bottom: 0;
-
-      font-size: 60px;
-    }
-
-    @include onDesktop {
-      grid-column: 1 / 6;
-      align-self: end;
-    }
-
-    & span {
-      display: block;
-    }
   }
 
   &__text-container {
@@ -78,5 +57,30 @@
     @include onDesktop {
       width: 1000px;
     }
+  }
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @include onTablet {
+    grid-column: span 3;
+
+    margin-bottom: 0;
+
+    font-size: 60px;
+  }
+
+  @include onDesktop {
+    grid-column: 1 / 6;
+    align-self: end;
+  }
+
+  &__word {
+    display: block;
+
+    overflow: hidden;
   }
 }

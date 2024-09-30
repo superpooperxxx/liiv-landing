@@ -10,7 +10,11 @@ export class SplitText {
     if (element) {
       initialText.forEach((char) => {
         const span = document.createElement("span");
-        span.textContent = char;
+        span.innerHTML = char;
+
+        if (char.trim()) {
+          span.style.display = "inline-block";
+        }
 
         this.chars.push(span);
         element.appendChild(span);
