@@ -52,18 +52,19 @@
 
     & svg {
       position: absolute;
-      top: -8px;
+      top: -6px;
       left: -16px;
-      right: -16px;
+
+      display: block;
+      width: 115%;
 
       @include onTablet {
-        left: -20px;
-        right: -20px;
+        top: -10px;
+        left: -24px;
       }
 
       @include onDesktop {
-        left: -24px;
-        right: -24px;
+        left: -30px;
       }
     }
   }

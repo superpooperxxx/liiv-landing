@@ -1,15 +1,15 @@
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$large-desktop-width: 1200px;
+// $tablet-width: 768px;
+// $desktop-width: 1024px;
+// $large-desktop-width: 1200px;
 
 @mixin onTablet {
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin onDesktop {
-  @media (min-width: $desktop-width) {
+  @media (min-width: 1024px) {
     @content;
   }
 }

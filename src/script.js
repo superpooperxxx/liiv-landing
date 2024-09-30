@@ -29,9 +29,9 @@ gsap
   });
 
 // THE PROBLEM
-const problemParagraph1chars = new SplitText("#the-problem__paragraph--1")
+const problemParagraph1chars = new SplitText(".the-problem__paragraph--1")
   .chars;
-const problemParagraph2chars = new SplitText("#the-problem__paragraph--2")
+const problemParagraph2chars = new SplitText(".the-problem__paragraph--2")
   .chars;
 
 gsap.set(problemParagraph1chars, { opacity: 0.05 });
@@ -40,7 +40,7 @@ gsap.set(problemParagraph2chars, { opacity: 0.05 });
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: "#the-problem__text",
+      trigger: ".the-problem__text",
       start: "top 50%",
       end: "bottom 50%",
       scrub: 0.5,
@@ -64,7 +64,7 @@ gsap.set(gsap.utils.toArray(".metrics__cards > li"), {
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: "#metrics",
+      trigger: ".metrics",
       endTrigger: ".metrics__cards",
       start: "top center",
       end: "bottom center",
@@ -79,7 +79,7 @@ gsap
 
 // PROBLEM SOLUTION LINE
 const problemSolutionLinePath = document.querySelector(
-  "#problem-solution-line-path"
+  ".problem-solution-line-path"
 );
 const problemSolutionLinePathLength = problemSolutionLinePath.getTotalLength();
 
@@ -115,7 +115,7 @@ gsap.set(gsap.utils.toArray(".our-solution__cards > li"), {
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: "#our-solution",
+      trigger: ".our-solution",
       endTrigger: ".our-solution__cards",
       start: "top center",
       end: "bottom center",
