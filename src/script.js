@@ -49,12 +49,12 @@ gsap.set(".hero__dashboard", {
 
 gsap
   .timeline({
-    onStart: () => {
-      lenis.stop();
-    },
-    onComplete: () => {
-      lenis.start();
-    },
+    // onStart: () => {
+    //   lenis.stop();
+    // },
+    // onComplete: () => {
+    //   lenis.start();
+    // },
   })
   .to(heroTitleWords, {
     yPercent: 0,
@@ -113,7 +113,22 @@ gsap
   .to(".affordable-line", {
     strokeDashoffset: 0,
     duration: 1,
+    ease: "power1.out",
   });
+
+// PROBLEM METRICS
+gsap.set(".problem-metrics", {
+  backgroundColor: "#fffdf9",
+});
+
+gsap.to(".problem-metrics", {
+  scrollTrigger: {
+    trigger: ".problem-metrics",
+    end: "top 40%",
+    scrub: true,
+  },
+  backgroundColor: "#EBF2EF",
+});
 
 // THE PROBLEM
 const problemParagraph1chars = new SplitText(".the-problem__paragraph--1")
@@ -153,8 +168,8 @@ gsap
     scrollTrigger: {
       trigger: ".metrics",
       endTrigger: ".metrics__cards",
-      start: "top center",
-      end: "bottom center",
+      start: "top 70%",
+      end: "bottom 70%",
       scrub: true,
     },
   })
@@ -162,6 +177,7 @@ gsap
     opacity: 1,
     y: 0,
     stagger: 0.1,
+    ease: "back.out(2)",
   });
 
 // PROBLEM SOLUTION LINE
@@ -204,8 +220,8 @@ gsap
     scrollTrigger: {
       trigger: ".our-solution",
       endTrigger: ".our-solution__cards",
-      start: "top center",
-      end: "bottom center",
+      start: "top 70%",
+      end: "bottom 70%",
       scrub: true,
     },
   })
@@ -213,4 +229,15 @@ gsap
     opacity: 1,
     y: 0,
     stagger: 0.1,
+    ease: "back.out(2)",
   });
+
+// CONTACT
+gsap.to(".contact__text--highlighted", {
+  scrollTrigger: {
+    trigger: ".contact__text--highlighted",
+    start: "bottom 90%",
+  },
+  color: "#379392",
+  duration: 1,
+});

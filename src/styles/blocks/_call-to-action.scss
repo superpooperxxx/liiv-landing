@@ -3,9 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 
-  padding-block: 160px;
+  padding-block: 120px;
+
+  @include onTablet {
+    padding-block: 160px;
+  }
 
   @include onDesktop {
     padding-block: 208px;
