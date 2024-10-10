@@ -1,17 +1,23 @@
 .hero {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 20px;
+  padding-block: 20px;
+  min-height: calc(100vh - 64px);
 
-  @include onTablet {
-    grid-template-columns: repeat(6, 1fr);
-    align-items: center;
-    row-gap: 20px;
-  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
 
-  @include onDesktop {
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: 12px;
+    @include onTablet {
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      row-gap: 20px;
+      padding-block: 40px;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(12, 1fr);
+      row-gap: 12px;
+    }
   }
 
   &__title {
@@ -53,9 +59,15 @@
   &__dashboard {
     width: 100%;
     box-shadow: -15px 15px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+    @include onTablet {
+      border-radius: 12px;
+    }
 
     @include onDesktop {
       width: 1000px;
+      border-radius: 20px;
     }
   }
 }
@@ -78,7 +90,7 @@
     align-self: end;
   }
 
-  &__word {
+  &__text {
     display: block;
 
     overflow: hidden;

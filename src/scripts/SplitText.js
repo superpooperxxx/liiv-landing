@@ -1,23 +1,40 @@
 export class SplitText {
   chars = [];
+  words = [];
 
   constructor(selector) {
-    const element = document.querySelector(selector);
-    const initialText = element.innerText.split("");
+    const element =
+      typeof selector === "object"
+        ? selector
+        : document.querySelector(selector);
 
-    element.innerText = "";
+    const words = element.innerText.split(/(\s+)/);
 
     if (element) {
-      initialText.forEach((char) => {
-        const span = document.createElement("span");
-        span.innerHTML = char;
+      element.innerText = "";
 
-        if (char.trim()) {
-          span.style.display = "inline-block";
-        }
+      words.forEach((word) => {
+        const wordElement = document.createElement("span");
 
-        this.chars.push(span);
-        element.appendChild(span);
+        // wordElement.style.display = "inline-block";
+
+        const chars = word.split("");
+
+        chars.forEach((char) => {
+          const charElement = document.createElement("span");
+          charElement.textContent = char;
+
+          if (!!char.trim()) {
+            wordElement.style.display = "inline-block";
+            charElement.style.display = "inline-block";
+          }
+
+          this.chars.push(charElement);
+          wordElement.appendChild(charElement);
+        });
+
+        this.words.push(wordElement);
+        element.appendChild(wordElement);
       });
     }
   }

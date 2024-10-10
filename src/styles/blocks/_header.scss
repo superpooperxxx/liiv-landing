@@ -1,5 +1,17 @@
 .header {
-  padding-block: 20px;
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 64px;
+
+    @include onTablet {
+      height: 68px;
+    }
+
+    @include onDesktop {
+      height: 78px;
+    }
+  }
 
   &__logo {
     display: block;

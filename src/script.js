@@ -15,26 +15,12 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 // HERO
-const housingWordChars = new SplitText(".hero-title__word--housing").chars;
-const authorityWordChars = new SplitText(".hero-title__word--authority").chars;
-const managementWordChars = new SplitText(".hero-title__word--management")
-  .chars;
-const softwareWordChars = new SplitText(".hero-title__word--software").chars;
+const heroTitleChars = gsap.utils
+  .toArray(".hero-title__text")
+  .map((word) => new SplitText(word).chars);
 
-const heroTitleWords = [
-  housingWordChars,
-  authorityWordChars,
-  managementWordChars,
-  softwareWordChars,
-];
-
-gsap.set(heroTitleWords, {
+gsap.set(heroTitleChars, {
   yPercent: 100,
-});
-
-gsap.set(".hero__text", {
-  opacity: 0,
-  y: 10,
 });
 
 gsap.set(".hero__tags", {
@@ -56,28 +42,18 @@ gsap
     //   lenis.start();
     // },
   })
-  .to(heroTitleWords, {
+  .to(heroTitleChars, {
     yPercent: 0,
     stagger: 0.05,
     duration: 1,
     ease: "back.out",
   })
-  .to(".hero__text", {
+  .to(".hero__tags", {
     opacity: 1,
     y: 0,
-    ease: "power3.out",
+    ease: "back.out",
     duration: 1,
   })
-  .to(
-    ".hero__tags",
-    {
-      opacity: 1,
-      y: 0,
-      ease: "back.out",
-      duration: 1,
-    },
-    "<"
-  )
   .to(
     ".hero__dashboard",
     {
@@ -88,33 +64,6 @@ gsap
     },
     "<"
   );
-
-// AFFORDABLE
-const affordableLinePath = document.querySelector(".affordable-line > path");
-const affordableLinePathLength = affordableLinePath.getTotalLength();
-
-gsap.set(".affordable-line", {
-  opacity: 0,
-  strokeDasharray: affordableLinePathLength,
-  strokeDashoffset: affordableLinePathLength,
-});
-
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".affordable-line",
-      start: "top 70%",
-    },
-  })
-  .to(".affordable-line", {
-    opacity: 1,
-    duration: 0,
-  })
-  .to(".affordable-line", {
-    strokeDashoffset: 0,
-    duration: 1,
-    ease: "power1.out",
-  });
 
 // PROBLEM METRICS
 gsap.set(".problem-metrics", {

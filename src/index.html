@@ -27,8 +27,8 @@
     <title>Liiv - Simplify Your Living</title>
   </head>
   <body>
-    <header class="header page__header">
-      <div class="container">
+    <header class="header">
+      <div class="container header__container">
         <a href="/">
           <img
             src="./assets/liiv-logo.png"
@@ -40,85 +40,35 @@
     </header>
 
     <main>
-      <section class="container hero">
-        <h1 class="hero-title hero__title">
-          <span class="hero-title__word hero-title__word--housing">
-            Housing
-          </span>
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero-title hero__title">
+            <span class="hero-title__text">Let's</span>
+            <span class="hero-title__text">Solve</span>
 
-          <span class="hero-title__word hero-title__word--authority">
-            Authority
-          </span>
+            <span class="hero-title__text hero-title__affordable">
+              Affordable
+            </span>
 
-          <span class="hero-title__word hero-title__word--management">
-            Management
-          </span>
+            <span class="hero-title__text">Housing</span>
+          </h1>
 
-          <span class="hero-title__word hero-title__word--software">
-            Software
-          </span>
-        </h1>
+          <div class="hero__text-container">
+            <ul class="tags hero__tags">
+              <li class="tags__tag">Housing Authority Management Software</li>
+              <li class="tags__tag">HUD Compliance</li>
+              <li class="tags__tag">Section 8 Voucher Tracking</li>
+              <li class="tags__tag">Unbiased Rental Application</li>
+              <li class="tags__tag">Tenant Request Tracking</li>
+              <li class="tags__tag">ML Tenant Payments + Leasing</li>
+              <li class="tags__tag">Automated Dashboard</li>
+            </ul>
+          </div>
 
-        <div class="hero__text-container">
-          <!-- <p class="hero__text">
-            Liiv provides property management software for housing authorities.
-            From rent collection, to Section 8 Voucher tracking to HUD
-            compliance & our unbiased rental application.
-          </p> -->
-
-          <ul class="tags hero__tags">
-            <li class="tags__tag">$2.5/room/per month</li>
-            <li class="tags__tag">HUD Compliance</li>
-            <li class="tags__tag">Section 8 Voucher Tracking</li>
-            <li class="tags__tag">Unbiased Rental Application</li>
-          </ul>
+          <div class="hero__dashboard-container">
+            <img src="./assets/Dashboard.png" alt="" class="hero__dashboard" />
+          </div>
         </div>
-
-        <div class="hero__dashboard-container">
-          <img src="./assets/Dashboard.png" alt="" class="hero__dashboard" />
-        </div>
-      </section>
-
-      <section class="container call-to-action">
-        <a href="mailto:admin@coliiving.com" class="call-to-action__email">
-          admin@coliiving.com
-        </a>
-
-        <p class="call-to-action__text">
-          <span>Let's solve</span>
-
-          <span class="call-to-action__affordable">
-            affordable
-            <svg
-              fill="none"
-              viewBox="0 0 202 56"
-              aria-hidden="true"
-              class="affordable-line"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="
-                  M93.6539 46.0952C117.726 48.0421 175.579 49.5996
-                  194.284 41.4226C197.639 39.8651 203.045 34.1802 197.836
-                  23.9007C192.627 13.6211 177.315 8.715 170.311 7.54687C155.019
-                  3.36107 106.736 -2.49905 35.9394 7.54687C29.5267 8.715 14.5702
-                  12.8619 6.04625 20.1043C-2.47773 27.3467 4.5664 37.3342 8.11806
-                  41.4226C9.3536 42.6417 11.3874 44.2757 15.8133 45.8031C28.351
-                  50.1301 56.2225 54.3254 106.973 53.98
-                "
-                stroke="#379392"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-            </svg>
-          </span>
-
-          <span>housing</span>
-        </p>
-
-        <button type="button" class="call-to-action__button">
-          Request a Demo
-        </button>
       </section>
 
       <div class="problem-metrics">
@@ -127,15 +77,16 @@
 
           <div class="the-problem__text">
             <p class="the-problem__paragraph the-problem__paragraph--1">
-              Housing authorities are grappling with maintenance backlogs,
-              rising overtime costs, and housing delays caused by outdated
-              manual processes.
+              Housing authorities are overwhelmed with maintenance backlogs,
+              increasing overtime expenses, and housing delays — all caused by
+              outdated processes.
             </p>
 
             <p class="the-problem__paragraph the-problem__paragraph--2">
-              These inefficiencies not only extend tenant wait times and create
-              unsafe living conditions but also delay and deny tens of millions
-              their basic right to housing.
+              These inefficiencies not only delay repairs but leave families,
+              especially children, without safe, stable housing. This disrupts
+              their lives, affecting their education, health, and sense of
+              security, denying them the basic right to a safe home.
             </p>
           </div>
         </section>
@@ -156,16 +107,14 @@
                     />
                   </svg>
                 </span>
-                These families don't need it in seven years—they needed it
-                yesterday
               </p>
             </li>
 
             <li class="card">
               <p class="card__text">
-                The 2nd largest Affordable Housing Authority in the US has
+                The second-largest housing authority
                 <span class="card__text--highlighted">
-                  over 2,300 vacant units,
+                  has 2,300 vacant units
 
                   <svg viewBox="0 0 248 6" fill="none" aria-hidden="true">
                     <path
@@ -175,13 +124,13 @@
                     />
                   </svg>
                 </span>
-                all because of poor Section 8 tracking.
+                due to poor Section 8 tracking.
               </p>
             </li>
 
             <li class="card">
               <p class="card__text">
-                One major U.S. city shelled out
+                One major U.S. city spent
                 <span class="card__text--highlighted">
                   $2.5 million
 
@@ -193,7 +142,7 @@
                     />
                   </svg>
                 </span>
-                in overtime just to increase tenant complaints by 10,000.
+                in overtime, only to increase tenant complaints by 10,000.
               </p>
             </li>
           </ul>
@@ -229,23 +178,20 @@
         <ul class="our-solution__cards">
           <li class="card">
             <p class="card__text">
-              An all-in-one software that eliminates inefficiencies
+              Software — that works. Our ML/AI automates tasks like rent
+              collection and tenant messaging removing administrative burdens.
             </p>
           </li>
 
           <li class="card">
             <p class="card__text">
-              Tenants gain a direct voice through our management portal,
-              enabling seamless communication with property managers
+              Section 8 voucher tracking reduces vacant unit downtime, helping
+              authorities manage occupancy more efficiently.
             </p>
           </li>
 
           <li class="card">
-            <p class="card__text">
-              Housing Authorities can monitor ticket resolution times, while our
-              Section 8 trackers streamline voucher delegation and ensure HUD
-              compliance
-            </p>
+            <p class="card__text">HUD Compliance.</p>
           </li>
         </ul>
       </section>
