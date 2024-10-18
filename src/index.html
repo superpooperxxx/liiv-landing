@@ -74,17 +74,18 @@
 
           <div class="the-problem__text">
             <p class="the-problem__paragraph the-problem__paragraph--1">
-              Housing authorities are overwhelmed with maintenance backlogs,
-              increasing overtime expenses, and housing delays — all caused by
-              outdated processes.
+              Housing authorities struggle with maintenance backlogs, rising
+              overtime costs, and delays due to outdated processes — leaving
+              families without safe, stable housing, which affects children's
+              education, health, and security.
             </p>
 
-            <p class="the-problem__paragraph the-problem__paragraph--2">
+            <!-- <p class="the-problem__paragraph the-problem__paragraph--2">
               These inefficiencies not only delay repairs but leave families,
               especially children, without safe, stable housing. This disrupts
               their lives, affecting their education, health, and sense of
               security, denying them the basic right to a safe home.
-            </p>
+            </p> -->
           </div>
         </section>
 
@@ -203,11 +204,11 @@
             seconds!
           </p>
 
-          <form class="contact-form contact__form">
+          <form id="contact-form" class="contact-form contact__form">
             <div class="contact-form__field">
-              <label for="#first-name" class="contact-form__label"
-                >First Name</label
-              >
+              <label for="first-name" class="contact-form__label">
+                First Name
+              </label>
 
               <input
                 id="first-name"
@@ -218,9 +219,12 @@
             </div>
 
             <div class="contact-form__field">
-              <label for="" class="contact-form__label"> Last Name </label>
+              <label for="last-name" class="contact-form__label">
+                Last Name
+              </label>
 
               <input
+                id="last-name"
                 type="text"
                 placeholder="Enter your last name"
                 class="contact-form__input"
@@ -228,9 +232,10 @@
             </div>
 
             <div class="contact-form__field">
-              <label for="" class="contact-form__label">Email</label>
+              <label for="email" class="contact-form__label">Email</label>
 
               <input
+                id="email"
                 type="text"
                 placeholder="Enter your email"
                 class="contact-form__input"
@@ -238,9 +243,12 @@
             </div>
 
             <div class="contact-form__field">
-              <label for="" class="contact-form__label">Organization</label>
+              <label for="organization" class="contact-form__label"
+                >Organization</label
+              >
 
               <input
+                id="organization"
                 type="text"
                 placeholder="Enter you organization name"
                 class="contact-form__input"
@@ -248,16 +256,21 @@
             </div>
 
             <div class="contact-form__field">
-              <label for="" class="contact-form__label">LinkedIn</label>
+              <label for="linkedin" class="contact-form__label">LinkedIn</label>
 
               <input
+                id="linkedin"
                 type="text"
                 placeholder="Pass a link to your LinkedIn"
                 class="contact-form__input"
               />
             </div>
 
-            <button type="submit" class="contact-form__submit">
+            <button
+              type="submit"
+              id="contact-submit"
+              class="contact-form__submit"
+            >
               Request a Demo
             </button>
           </form>
